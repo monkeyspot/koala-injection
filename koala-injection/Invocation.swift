@@ -35,7 +35,7 @@ public extension Invocation.ArgumentProjection where T: AnyObject, Location: Aft
             self.invocation.getArgument(&value, at: index + 2)
             return value!.takeUnretainedValue()
         }
-        @available(*, deprecated: 1.0, message: "Setting arguments is not supported after instance implementations, use koala.before instead") set(newValue) {
+        @available(*, deprecated: 1.0, message: "Setting arguments is not supported after instance implementations, use koala🐨.before instead") set(newValue) {
 
         }
     }
@@ -62,7 +62,7 @@ public extension Invocation.ArgumentProjection where T: Any, Location: After {
             self.invocation.getArgument(&value, at: index + 2)
             return value!
         }
-        @available(*, deprecated: 1.0, message: "Setting arguments is not supported after instance implementations, use koala.before instead") set(newValue) {
+        @available(*, deprecated: 1.0, message: "Setting arguments is not supported after instance implementations, use koala🐨.before instead") set(newValue) {
 
         }
     }

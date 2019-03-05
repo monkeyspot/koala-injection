@@ -1,5 +1,5 @@
 PODS:
-  - KoalaInjection (0.1.0)
+  - KoalaInjection (0.2.0)
 
 DEPENDENCIES:
   - KoalaInjection (from `.`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "."
 
 SPEC CHECKSUMS:
-  KoalaInjection: daf03ec1fd0977c16de6bffff5e3b4798e4660c0
+  KoalaInjection: 3b2b1f0b2088b14b441414c0a9602b89861350f3
 
 PODFILE CHECKSUM: d441b55ba56f20c43f29bbd54a65ba6f5daa71f5
 

@@ -49,7 +49,7 @@ public extension KoalaProxy where Location: Before {
             })
         }
     }
-    
+
     public subscript(dynamicMember member: String) -> (@escaping (Type) -> Void) -> Void {
         return { closure in
             koala_hookMember(self.object, member, self.injectBefore, { object, _ in
@@ -57,7 +57,7 @@ public extension KoalaProxy where Location: Before {
             })
         }
     }
-    
+
     public subscript(dynamicMember member: String) -> (@escaping (Type, Invocation<Location>) -> Void) -> Void {
         return { closure in
             koala_hookMember(self.object, member, self.injectBefore, { object, invocation in
@@ -67,48 +67,8 @@ public extension KoalaProxy where Location: Before {
     }
 }
 
-
 // allow arbitrary return types after original implementation, except void return typed
 public extension KoalaProxy where Location: After {
-    public subscript<T>(dynamicMember member: String) -> (@escaping () -> T) -> Void where T: AnyObject {
-        return { closure in
-            koala_hookMember(self.object, member, self.injectBefore, { _, invocation in
-                var value = Unmanaged.passRetained(closure())
-                invocation.setReturnValue(&value)
-            })
-        }
-    }
-    
-    public subscript<T>(dynamicMember member: String) -> (@escaping (Type) -> T) -> Void where T: AnyObject {
-        return { closure in
-            koala_hookMember(self.object, member, self.injectBefore, { object, invocation in
-                var value = Unmanaged.passRetained(closure(object as! Type))
-                invocation.setReturnValue(&value)
-            })
-        }
-    }
-    
-    public subscript<T>(dynamicMember member: String) -> (@escaping (Type, Invocation<Location>) -> T) -> Void where T: AnyObject {
-        return { closure in
-            koala_hookMember(self.object, member, self.injectBefore, { object, invocation in
-                var value = Unmanaged.passRetained(closure(object as! Type, Invocation(invocation: invocation)))
-                invocation.setReturnValue(&value)
-            })
-        }
-    }
-    
-    public subscript<T>(dynamicMember member: String) -> (@escaping (Type, Invocation<Location>, T) -> T) -> Void where T: AnyObject {
-        return { closure in
-            koala_hookMember(self.object, member, self.injectBefore, { object, invocation in
-                var returned: Unmanaged<T>?
-                invocation.getReturnValue(&returned)
-                
-                var value = Unmanaged.passRetained(closure(object as! Type, Invocation(invocation: invocation), returned!.takeUnretainedValue()))
-                invocation.setReturnValue(&value)
-            })
-        }
-    }
-    
     public subscript<T>(dynamicMember member: String) -> (@escaping () -> T) -> Void where T: Any {
         return { closure in
             koala_hookMember(self.object, member, self.injectBefore, { _, invocation in
@@ -147,29 +107,4 @@ public extension KoalaProxy where Location: After {
             })
         }
     }
-    
-    public subscript(dynamicMember member: String) -> (@escaping () -> Void) -> Void {
-        return { closure in
-            koala_hookMember(self.object, member, self.injectBefore, { _, _ in
-                return closure()
-            })
-        }
-    }
-    
-    public subscript(dynamicMember member: String) -> (@escaping (Type) -> Void) -> Void {
-        return { closure in
-            koala_hookMember(self.object, member, self.injectBefore, { object, _ in
-                closure(object as! Type)
-            })
-        }
-    }
-    
-    public subscript(dynamicMember member: String) -> (@escaping (Type, Invocation<Location>) -> Void) -> Void {
-        return { closure in
-            koala_hookMember(self.object, member, self.injectBefore, { object, invocation in
-                closure(object as! Type, Invocation(invocation: invocation))
-            })
-        }
-    }
-
 }

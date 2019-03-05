@@ -14,6 +14,10 @@ public extension KoalaHost where Self: NSObject {
     var koala: KoalaProxy<Self, After> {
         return KoalaProxy(object: self)
     }
+    
+    var koala🐨: KoalaProxy<Self, After> {
+        return KoalaProxy(object: self)
+    }
 }
 
 extension NSObject: KoalaHost {}

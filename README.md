@@ -1,23 +1,59 @@
-# koala-injection
+# 🐨 KoalaInjection
 
-[![CI Status](https://img.shields.io/travis/Oliver Letterer/koala-injection.svg?style=flat)](https://travis-ci.org/Oliver Letterer/koala-injection)
-[![Version](https://img.shields.io/cocoapods/v/koala-injection.svg?style=flat)](https://cocoapods.org/pods/koala-injection)
-[![License](https://img.shields.io/cocoapods/l/koala-injection.svg?style=flat)](https://cocoapods.org/pods/koala-injection)
-[![Platform](https://img.shields.io/cocoapods/p/koala-injection.svg?style=flat)](https://cocoapods.org/pods/koala-injection)
+Evil but simple code injection, don't use!
 
 ## Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+```swift
+let view = UIView(frame: CGRect(x: 0.0, y: 0.0, width: 50.0, height: 50.0))
+view.backgroundColor = UIColor.red
 
-## Requirements
+view.koala.layoutSubviews { ✅ // inject code after original implementation
+    $0.backgroundColor = UIColor.blue
+}
+```
 
-## Installation
+### Advanced
 
-koala-injection is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+#### • extract arguments
 
-```ruby
-pod 'koala-injection'
+```swift
+let viewController = UIViewController()
+
+viewController.koala.setTitle { ✅
+    print($1.arguments()[0] as NSString)
+}
+```
+
+#### • change arguments
+
+```swift
+let viewController = UIViewController()
+
+viewController.koala.before.viewWillDisappear { ✅
+    $1.arguments()[0] = true
+}
+```
+
+#### • return values
+
+```swift
+let viewController = UIViewController()
+
+viewController.koala.prefersStatusBarHidden { ✅
+    return Bool.random()
+}
+```
+
+#### • change returned values
+
+```swift
+let viewController = UIViewController()
+viewController.title = "Hello"
+
+viewController.koala.title { ✅
+    return ($2 as NSString?)?.appending(" world")
+}
 ```
 
 ## Author
@@ -26,4 +62,4 @@ Oliver Letterer, oliver.letterer@gmail.com
 
 ## License
 
-koala-injection is available under the MIT license. See the LICENSE file for more info.
+KoalaInjection is available under the MIT license. See the LICENSE file for more info.

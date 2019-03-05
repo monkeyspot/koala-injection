@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0900"
+   LastUpgradeVersion = "1010"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,24 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-               BuildableName = "koala-injection_Example.app"
-               BlueprintName = "koala-injection_Example"
-               ReferencedContainer = "container:koala-injection.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "koala-injection_Tests.xctest"
-               BlueprintName = "koala-injection_Tests"
-               ReferencedContainer = "container:koala-injection.xcodeproj">
+               BlueprintIdentifier = "A7CEBA30222BEF03002880A7"
+               BuildableName = "example.app"
+               BlueprintName = "example"
+               ReferencedContainer = "container:example.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -40,27 +26,16 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "koala-injection_Tests.xctest"
-               BlueprintName = "koala-injection_Tests"
-               ReferencedContainer = "container:koala-injection.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "koala-injection_Example.app"
-            BlueprintName = "koala-injection_Example"
-            ReferencedContainer = "container:koala-injection.xcodeproj">
+            BlueprintIdentifier = "A7CEBA30222BEF03002880A7"
+            BuildableName = "example.app"
+            BlueprintName = "example"
+            ReferencedContainer = "container:example.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -70,7 +45,6 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -81,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "koala-injection_Example.app"
-            BlueprintName = "koala-injection_Example"
-            ReferencedContainer = "container:koala-injection.xcodeproj">
+            BlueprintIdentifier = "A7CEBA30222BEF03002880A7"
+            BuildableName = "example.app"
+            BlueprintName = "example"
+            ReferencedContainer = "container:example.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -100,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "koala-injection_Example.app"
-            BlueprintName = "koala-injection_Example"
-            ReferencedContainer = "container:koala-injection.xcodeproj">
+            BlueprintIdentifier = "A7CEBA30222BEF03002880A7"
+            BuildableName = "example.app"
+            BlueprintName = "example"
+            ReferencedContainer = "container:example.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

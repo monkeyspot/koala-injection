@@ -21,7 +21,7 @@ view.koala.layoutSubviews { ✅ // inject code after original implementation
 let viewController = UIViewController()
 
 viewController.koala🐨.setTitle { ✅
-    print($1.arguments()[0] as NSString)
+    let title = $1.arguments()[0] as NSString
 }
 ```
 

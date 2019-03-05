@@ -19,6 +19,7 @@
 		1B1FAAE148FE25AB10E33600 /* Pods-example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-example.release.xcconfig"; path = "Target Support Files/Pods-example/Pods-example.release.xcconfig"; sourceTree = "<group>"; };
 		52596CC81701F7150922DEE1 /* Pods_example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52A9EE696EAC7184325FA60E /* Pods-example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-example.debug.xcconfig"; path = "Target Support Files/Pods-example/Pods-example.debug.xcconfig"; sourceTree = "<group>"; };
+		A72E57D7222EE48900DEEC9E /* koala.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = koala.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A7CEBA31222BEF03002880A7 /* example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7CEBA34222BEF03002880A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7CEBA36222BEF03002880A7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +52,7 @@
 		A7CEBA28222BEF03002880A7 = {
 			isa = PBXGroup;
 			children = (
+				A72E57D7222EE48900DEEC9E /* koala.playground */,
 				A7CEBA33222BEF03002880A7 /* example */,
 				A7CEBA32222BEF03002880A7 /* Products */,
 				EEE42C7ABD854309010AAD63 /* Pods */,

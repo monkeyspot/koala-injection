@@ -40,7 +40,7 @@ viewController.koala🐨.before.viewWillDisappear { ✅
 ```swift
 let viewController = UIViewController()
 
-viewController.koala🐨.prefersStatusBarHidden { ✅
+viewController.koala🐨.prefersStatusBarHidden { () -> Bool in ✅
     return Bool.random()
 }
 ```
@@ -51,8 +51,8 @@ viewController.koala🐨.prefersStatusBarHidden { ✅
 let viewController = UIViewController()
 viewController.title = "Hello"
 
-viewController.koala🐨.title { ✅
-    return ($2 as NSString?)?.appending(" world")
+viewController.koala🐨.title { (_, _, result) -> NSString? in ✅
+    return result?.appending(" world") as NSString?
 }
 ```
 

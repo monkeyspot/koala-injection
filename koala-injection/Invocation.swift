@@ -49,7 +49,7 @@ public extension Invocation.ArgumentProjection where T: AnyObject, Location: Bef
             return value!.takeUnretainedValue()
         }
         set(newValue) {
-            var value: Unmanaged<T>? = Unmanaged.passRetained(newValue)
+            var value: Unmanaged<T>? = Unmanaged.passUnretained(newValue)
             self.invocation.setArgument(&value, at: index + 2)
         }
     }

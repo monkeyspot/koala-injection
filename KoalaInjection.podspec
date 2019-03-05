@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'KoalaInjection'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'Evil but simple code injection, don\'t use!'
 
   s.description      = <<-DESC

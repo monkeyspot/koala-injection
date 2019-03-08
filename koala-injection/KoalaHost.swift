@@ -11,6 +11,7 @@ import Foundation
 public protocol KoalaHost: AnyObject {}
 
 public extension KoalaHost where Self: NSObject {
+    @available(*, deprecated: 1.0, message: "use KoalaHost.koala🐨 instead")
     var koala: KoalaProxy<Self, After> {
         return KoalaProxy(object: self)
     }

@@ -15,14 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // inject code
-        window?.koala.layoutSubviews {
+        window?.koala🐨.layoutSubviews {
             $0.rootViewController?.view.backgroundColor = [UIColor.orange, UIColor.red, UIColor.blue].randomElement()!
         }
         
         testMemory()
         playground()
         Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true) { _ in
-            self.window?.rootViewController?.koala.before.viewWillDisappear {
+            self.window?.rootViewController?.koala🐨.before.viewWillDisappear {
                 $1.arguments()[0] = true // always disappear "animted"
             }
 
@@ -68,7 +68,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func playground() {
         // transform return value
         window?.rootViewController?.title = "Hello"
-        window?.rootViewController?.koala.title {
+        window?.rootViewController?.koala🐨.title {
             return ($2 as NSString?)?.appending(" world")
         }
         
@@ -77,24 +77,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         // get and set arguments before
-        window?.rootViewController?.koala.before.setTitle {
+        window?.rootViewController?.koala🐨.before.setTitle {
             print($1.arguments()[0] as NSString)
             $1.arguments()[0] = "Hello world" as NSString
         }
         
         // get arguments after
-        window?.rootViewController?.koala.setTitle {
+        window?.rootViewController?.koala🐨.setTitle {
             print($1.arguments()[0] as NSString)
             $1.arguments()[0] = "Hello world" as NSString
         }
         
         // no return before
-        window?.rootViewController?.koala.before.prefersStatusBarHidden {
+        window?.rootViewController?.koala🐨.before.prefersStatusBarHidden {
             return Bool.random()
         }
         
         // return after
-        window?.rootViewController?.koala.prefersStatusBarHidden {
+        window?.rootViewController?.koala🐨.prefersStatusBarHidden {
             return Bool.random()
         }
         

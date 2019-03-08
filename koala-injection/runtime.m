@@ -19,7 +19,7 @@ Method koala_lookupMember(Class klass, NSString *member)
 
     for (unsigned int i = 0; i < count; i++) {
         Method method = methods[i];
-        NSString *memberName = [NSStringFromSelector(method_getName(method)) stringByReplacingOccurrencesOfString:@":" withString:@""]; // no support for selectors of type xxx::: 🌬
+        NSString *memberName = [NSStringFromSelector(method_getName(method)) stringByReplacingOccurrencesOfString:@":" withString:@""]; // no support for selectors of type xxx::: 🌬🎂
 
         if ([memberName isEqualToString:member]) {
             free(methods);
